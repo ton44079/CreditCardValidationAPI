@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="5822997e-d347-48c8-993c-5d2f15f91229" ChangeDateTime="07/04/2018 08:40:10">
+    <Property Name="ElementName" Value="[dbo].[CREDIT_CARDS].[CardNumber]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CREDIT_CARDS]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CARD_NUMBER" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="27c8fd77-17d7-48e5-b9d0-f242cd1e555b" ChangeDateTime="07/04/2018 08:40:21">
+    <Property Name="ElementName" Value="[dbo].[CREDIT_CARDS].[ExpiryDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CREDIT_CARDS]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EXPIRY_DATE" />
+  </Operation>
+</Operations>

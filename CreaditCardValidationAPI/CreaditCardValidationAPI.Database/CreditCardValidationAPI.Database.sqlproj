@@ -61,4 +61,11 @@
     <Folder Include="Store Procedures" />
     <Folder Include="Scripts" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\CREDIT_CARDS.sql" />
+    <Build Include="Store Procedures\SP_CREDIT_CARD_VALIDATION.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="CreditCardValidationAPI.Database.refactorlog" />
+  </ItemGroup>
 </Project>
