@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[SP_CREDIT_CARD_VALIDATION]
-	@cardNumber bigint
+	@cardNumber numeric(16,0)
 	--@expiryDate date
 AS
 	DECLARE @Exist int ,@Result nvarchar(20),@CardType nvarchar(10), @ExpiryMonth int, @ExpiryYear int, @FirstDigit nvarchar(1)

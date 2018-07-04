@@ -7,8 +7,8 @@
     <ProjectGuid>{29A7BE21-6249-4B20-A76F-50FAE7802FBA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CreaditCardValidationAPI.Services</RootNamespace>
-    <AssemblyName>CreaditCardValidationAPI.Services</AssemblyName>
+    <RootNamespace>CreditCardValidationAPI.Services</RootNamespace>
+    <AssemblyName>CreditCardValidationAPI.Services</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,12 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implements\CreditCardService.cs" />
+    <Compile Include="Interfaces\ICreditCardService.cs" />
+    <Compile Include="Models\ValidateResultModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Implements\" />
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

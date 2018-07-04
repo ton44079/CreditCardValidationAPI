@@ -7,8 +7,8 @@
     <ProjectGuid>{60E998F8-E6F7-4316-B1AA-A97F97B88D38}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CreaditCardValidationAPI.Repositories</RootNamespace>
-    <AssemblyName>CreaditCardValidationAPI.Repositories</AssemblyName>
+    <RootNamespace>CreditCardValidationAPI.Repositories</RootNamespace>
+    <AssemblyName>CreditCardValidationAPI.Repositories</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,12 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implements\SpCreditCardValidationRepository.cs" />
+    <Compile Include="Interfaces\ISpCreditCardValidationRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Implements\" />
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

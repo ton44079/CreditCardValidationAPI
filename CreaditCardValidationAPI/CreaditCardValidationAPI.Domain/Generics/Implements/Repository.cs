@@ -1,4 +1,5 @@
-﻿using CreaditCardValidationAPI.Domain.Generics.Interfaces;
+﻿using CreditCardValidationAPI.Domain.Generics.Interfaces;
+using CreditCardValidationAPI.Domain.Context;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,15 +8,15 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreaditCardValidationAPI.Domain.Generics.Implements
+namespace CreditCardValidationAPI.Domain.Generics.Implements
 {
     public abstract class Repository<T> : IRepository<T>
         where T : class
     {
-        protected DbContext _entities;
+        protected CreditDBEntities _entities;
         protected readonly IDbSet<T> _dbset;
 
-        public Repository(DbContext context)
+        public Repository(CreditDBEntities context)
         {
             _entities = context;
             _dbset = context.Set<T>();

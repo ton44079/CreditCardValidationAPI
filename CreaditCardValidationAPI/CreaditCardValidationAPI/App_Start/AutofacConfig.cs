@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
+using CreditCardValidationAPI.Domain.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,7 @@ namespace CreaditCardValidationAPI.App_Start
             {
 
                // builder.RegisterType(typeof(CCBContext)).As(typeof(CCBContext)).InstancePerLifetimeScope();
-               // builder.RegisterType(typeof(SaleSystemContext)).As(typeof(SaleSystemContext)).InstancePerLifetimeScope();
+                builder.RegisterType(typeof(CreditDBEntities)).As(typeof(CreditDBEntities)).InstancePerLifetimeScope();
                // builder.RegisterType(typeof(UnitOfWorkCCB)).As(typeof(IUnitOfWorkCCB)).InstancePerRequest();
                // builder.RegisterType(typeof(UnitOfWorkSale)).As(typeof(IUnitOfWorkSale)).InstancePerRequest();
             }

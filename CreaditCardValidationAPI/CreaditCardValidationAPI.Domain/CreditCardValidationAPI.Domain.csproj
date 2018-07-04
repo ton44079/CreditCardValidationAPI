@@ -7,8 +7,8 @@
     <ProjectGuid>{10D43B0E-C7FA-460F-8901-E17F1BE590D1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CreaditCardValidationAPI.Domain</RootNamespace>
-    <AssemblyName>CreaditCardValidationAPI.Domain</AssemblyName>
+    <RootNamespace>CreditCardValidationAPI.Domain</RootNamespace>
+    <AssemblyName>CreditCardValidationAPI.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,6 +39,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\CreditCardContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreditCardContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CreditCardContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreditCardContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CreditCardContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreditCardContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Context\SP_CREDIT_CARD_VALIDATION_Result.cs">
+      <DependentUpon>CreditCardContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Generics\Implements\Repository.cs" />
     <Compile Include="Generics\Implements\UnitOfWork.cs" />
     <Compile Include="Generics\Interfaces\IRepository.cs" />
@@ -54,12 +74,33 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Context\" />
     <Folder Include="Helper\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="Context\CreditCardContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CreditCardContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Context\CreditCardContext.edmx.diagram">
+      <DependentUpon>CreditCardContext.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Context\CreditCardContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CreditCardContext.edmx</DependentUpon>
+      <LastGenOutput>CreditCardContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Context\CreditCardContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CreditCardContext.edmx</DependentUpon>
+      <LastGenOutput>CreditCardContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

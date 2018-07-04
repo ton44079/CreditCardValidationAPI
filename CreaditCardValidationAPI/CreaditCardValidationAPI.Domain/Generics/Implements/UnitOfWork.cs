@@ -1,4 +1,4 @@
-﻿using CreaditCardValidationAPI.Domain.Generics.Interfaces;
+﻿using CreditCardValidationAPI.Domain.Generics.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreaditCardValidationAPI.Domain.Generics.Implements
+namespace CreditCardValidationAPI.Domain.Generics.Implements
 {
     public class UnitOfWork : IUnitOfWork
     {

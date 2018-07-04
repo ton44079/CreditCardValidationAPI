@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreaditCardValidationAPI.Domain.Generics.Interfaces
+namespace CreditCardValidationAPI.Domain.Generics.Interfaces
 {
     public interface IRepository<T> where T : class
     {

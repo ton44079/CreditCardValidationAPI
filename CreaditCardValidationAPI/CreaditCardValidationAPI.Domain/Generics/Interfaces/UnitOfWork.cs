@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreaditCardValidationAPI.Domain.Generics.Interfaces
+namespace CreditCardValidationAPI.Domain.Generics.Interfaces
 {
     public interface IUnitOfWork
     {
