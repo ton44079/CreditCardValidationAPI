@@ -47,6 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generics\Implements\Repository.cs" />
+    <Compile Include="Generics\Implements\UnitOfWork.cs" />
+    <Compile Include="Generics\Interfaces\IRepository.cs" />
+    <Compile Include="Generics\Interfaces\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
