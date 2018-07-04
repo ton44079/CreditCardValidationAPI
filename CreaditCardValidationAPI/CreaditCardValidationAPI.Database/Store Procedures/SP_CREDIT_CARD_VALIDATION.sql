@@ -49,7 +49,7 @@ AS
 								 WHEN  16  THEN @TxtValid   
 							  	 ELSE @TxtInvalid
 								END
-				   ELSE @TxtInvalid
+				   ELSE @TxtInvalid -- Refer 11. The rest is "Invalid" Card.
 			END) AS Result
 			FROM 
 			(select CONVERT(nvarchar(20),CARD_NUMBER) as STR_CARD_NUMBER,

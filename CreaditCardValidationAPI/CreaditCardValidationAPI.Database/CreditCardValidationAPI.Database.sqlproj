@@ -70,4 +70,7 @@
   <ItemGroup>
     <RefactorLog Include="CreditCardValidationAPI.Database.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
 </Project>
