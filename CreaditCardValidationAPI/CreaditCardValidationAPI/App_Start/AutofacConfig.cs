@@ -41,11 +41,7 @@ namespace CreaditCardValidationAPI.App_Start
         {
             protected override void Load(ContainerBuilder builder)
             {
-
-               // builder.RegisterType(typeof(CCBContext)).As(typeof(CCBContext)).InstancePerLifetimeScope();
                 builder.RegisterType(typeof(CreditDBEntities)).As(typeof(CreditDBEntities)).InstancePerLifetimeScope();
-               // builder.RegisterType(typeof(UnitOfWorkCCB)).As(typeof(IUnitOfWorkCCB)).InstancePerRequest();
-               // builder.RegisterType(typeof(UnitOfWorkSale)).As(typeof(IUnitOfWorkSale)).InstancePerRequest();
             }
         }
 
