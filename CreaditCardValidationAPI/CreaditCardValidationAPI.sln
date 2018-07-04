@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreaditCardValidationAPI", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreaditCardValidationAPI.Tests", "CreaditCardValidationAPI.Tests\CreaditCardValidationAPI.Tests.csproj", "{2AF0C4E2-2C9A-42AE-B701-1A60C3F1EDEA}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CreaditCardValidationAPI.Database", "CreaditCardValidationAPI.Database\CreaditCardValidationAPI.Database.sqlproj", "{45E0E612-865C-4425-9F64-787931B95EC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreaditCardValidationAPI.Domain", "CreaditCardValidationAPI.Domain\CreaditCardValidationAPI.Domain.csproj", "{10D43B0E-C7FA-460F-8901-E17F1BE590D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreaditCardValidationAPI.Repositories", "CreaditCardValidationAPI.Repositories\CreaditCardValidationAPI.Repositories.csproj", "{60E998F8-E6F7-4316-B1AA-A97F97B88D38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreaditCardValidationAPI.Services", "CreaditCardValidationAPI.Services\CreaditCardValidationAPI.Services.csproj", "{29A7BE21-6249-4B20-A76F-50FAE7802FBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +29,24 @@ Global
 		{2AF0C4E2-2C9A-42AE-B701-1A60C3F1EDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF0C4E2-2C9A-42AE-B701-1A60C3F1EDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF0C4E2-2C9A-42AE-B701-1A60C3F1EDEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E0E612-865C-4425-9F64-787931B95EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E0E612-865C-4425-9F64-787931B95EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E0E612-865C-4425-9F64-787931B95EC1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{45E0E612-865C-4425-9F64-787931B95EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E0E612-865C-4425-9F64-787931B95EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E0E612-865C-4425-9F64-787931B95EC1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{10D43B0E-C7FA-460F-8901-E17F1BE590D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D43B0E-C7FA-460F-8901-E17F1BE590D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D43B0E-C7FA-460F-8901-E17F1BE590D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D43B0E-C7FA-460F-8901-E17F1BE590D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E998F8-E6F7-4316-B1AA-A97F97B88D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E998F8-E6F7-4316-B1AA-A97F97B88D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E998F8-E6F7-4316-B1AA-A97F97B88D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E998F8-E6F7-4316-B1AA-A97F97B88D38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A7BE21-6249-4B20-A76F-50FAE7802FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A7BE21-6249-4B20-A76F-50FAE7802FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A7BE21-6249-4B20-A76F-50FAE7802FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A7BE21-6249-4B20-A76F-50FAE7802FBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
