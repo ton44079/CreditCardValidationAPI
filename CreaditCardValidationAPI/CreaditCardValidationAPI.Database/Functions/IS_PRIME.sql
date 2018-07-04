@@ -1,33 +1,39 @@
 ﻿CREATE FUNCTION [dbo].[IS_PRIME]
 (
-	@number int
+      @NumberToTest int
 )
 RETURNS bit
 AS
 BEGIN
-	DECLARE @prime_or_notPrime INT
-    DECLARE @counter INT
-    DECLARE @retVal VARCHAR(10)
-    SET @retVal = 0
+      -- Declare the return variable here
+      DECLARE @IsPrime bit,
+                  @Divider int
 
-    SET @prime_or_notPrime = 1
-    SET @counter = 2
+      -- To speed things up, we will only attempt dividing by odd numbers
 
-    WHILE (@counter <= @number/2 )
-    BEGIN
+      -- We first take care of all evens, except 2
+      IF (@NumberToTest % 2 = 0 AND @NumberToTest > 2)
+            SET @IsPrime = 0
+      ELSE
+            SET @IsPrime = 1 -- By default, declare the number a prime
 
-        IF (( @number % @counter) = 0 )
-        BEGIN
-            set @prime_or_notPrime = 0
-            BREAK
-        END
+      --We then use a loop to attempt to disprove the number is a prime
 
-        IF (@prime_or_notPrime = 1 )
-        BEGIN
-            SET @retVal = 1
-        END
+      SET @Divider = 3 -- Start with the first odd superior to 1
 
-        SET @counter = @counter + 1
-    END
-    return @retVal
+      -- We loop up through the odds until the square root of the number to test
+      -- or until we disprove the number is a prime
+      WHILE (@Divider <= floor(sqrt(@NumberToTest))) AND (@IsPrime = 1)
+      BEGIN
+
+            -- Simply use a modulo
+            IF @NumberToTest % @Divider = 0
+                  SET @IsPrime = 0
+            -- We only consider odds, therefore the step is 2
+            SET @Divider = @Divider + 2
+      END  
+
+      -- Return the result of the function
+      RETURN @IsPrime
+
 END
