@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework">
       <HintPath>..\packages\MSTest.TestFramework.1.1.17\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
@@ -60,12 +66,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CreaditCardValidationAPI\CreaditCardValidationAPI.csproj">
+    <ProjectReference Include="..\CreaditCardValidationAPI.Domain\CreditCardValidationAPI.Domain.csproj">
+      <Project>{10d43b0e-c7fa-460f-8901-e17f1be590d1}</Project>
+      <Name>CreditCardValidationAPI.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CreaditCardValidationAPI.Repositories\CreditCardValidationAPI.Repositories.csproj">
+      <Project>{60e998f8-e6f7-4316-b1aa-a97f97b88d38}</Project>
+      <Name>CreditCardValidationAPI.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CreaditCardValidationAPI.Services\CreditCardValidationAPI.Services.csproj">
+      <Project>{29a7be21-6249-4b20-a76f-50fae7802fba}</Project>
+      <Name>CreditCardValidationAPI.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CreaditCardValidationAPI\CrditCardValidationAPI.csproj">
       <Project>{AC7BE41C-2F8E-492B-BD4C-F0B95D3858C6}</Project>
-      <Name>CreaditCardValidationAPI</Name>
+      <Name>CrditCardValidationAPI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

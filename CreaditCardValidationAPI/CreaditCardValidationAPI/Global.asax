@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="CreaditCardValidationAPI.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="CreditCardValidationAPI.Global" Language="C#" %>
