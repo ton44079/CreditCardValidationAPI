@@ -36,11 +36,17 @@ AS
 				   ELSE @Unknown
 			END) AS CardType,
 			 (CASE  SUBSTRING(CONVERT(nvarchar(16),CARD_NUMBER), 1, 1)
-				   WHEN  4  THEN @Visa   
-				   WHEN  5  THEN @Master  
-				   WHEN  3  THEN	
+				   WHEN  4  THEN CASE
+									When (YEAR(EXPIRY_DATE) % 4 = 0 AND YEAR(EXPIRY_DATE) % 100 <> 0) OR YEAR(EXPIRY_DATE) % 400 = 0 THEN  @TxtValid
+								    ELSE @TxtInvalid
+								 END
+				   --WHEN  5  THEN CASE 
+							--		When IS_PRIME((YEAR(EXPIRY_DATE)) = 1 THEN  @TxtValid
+							--	    ELSE @TxtInvalid
+							--	 END
+				   WHEN  3  THEN	-- Case Vasa / JCB
 								CASE LEN(CONVERT(nvarchar(16),CARD_NUMBER)) -- Check Lenght of Card Number
-								 WHEN  15  THEN @Visa   
+								 WHEN  15  THEN @TxtInvalid   -- Refer 11. The rest is "Invalid" Card.
 								 WHEN  16  THEN @TxtValid   
 							  	 ELSE @TxtInvalid
 								END
